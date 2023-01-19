@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    list-style: none;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+body{
+    background: linear-gradient(#111,#222);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgb(82, 24, 158);
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+    z-index: -1;
+
+}
+.contain{
+    height: 80%;
+    width: 80%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+}
+.logo{
+    font-size: 30px;
+    color: rgb(33, 202, 202);
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 6px;
+}
+nav ul li a{
+    color:white;
+    font-weight: 500;
+}
+.fool img{
+    height: 200px;
+    width: 290px;
+}
+.fool{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 50px;
+    padding-top: 50px;
+}
+.fool h2{
+    color: white;
+    font-size:40px;
+    text-transform: uppercase;
+}
+.fool p{
+    color: white;
+    line-height: 30px;
+}
+@media (min-width:750px) and  (max-width:1150px){
+
+    .contain{
+        height: 95%;
+        width: 85%;
+    }
+    .fool img{
+        height: 230px;
+        width: 350px;
+    }
+    .fool{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+}
+@media (max-width:750px){
+    .fool,nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contain{
+        height: 95%;
+        width: 90%;
+    }
+    .fool img{
+        height: 230px;
+        width: 350px;
+    }
+    body::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgb(155, 16, 143);
+        clip-path: circle(46% at bottom );
+    }
+}
